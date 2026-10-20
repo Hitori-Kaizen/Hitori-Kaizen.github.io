@@ -15,3 +15,13 @@ images/siyu2.jpg
 images/siyu3.jpg
 images/siyu4.jpg
 images/siyu5.jpg
+
+# Coursework scripts and unused placeholder art - kept on the USB, not published.
+# validation.js validated the old contact form; slider.js drives a slider that
+# no page has. Neither is referenced by any surviving page.
+js/validation.js
+js/slider.js
+images/slide-*.svg
+images/portfolio-4.svg
+images/portfolio-5.svg
+images/portfolio-6.svg
