@@ -51,7 +51,11 @@
     if (reduced || sessionStorage.getItem('mmIntroSeen')) return;
     sessionStorage.setItem('mmIntroSeen', '1');
 
-    var isSpanish = document.documentElement.lang === 'es';
+    var tags = {
+      en: 'a portfolio by matthew macalintal',
+      es: 'un portfolio de matthew macalintal',
+      fil: 'isang portfolio ni matthew macalintal'
+    };
     var loader = document.createElement('div');
     loader.className = 'loader';
 
@@ -67,7 +71,7 @@
 
     var tag = document.createElement('div');
     tag.className = 'loader-tag';
-    tag.textContent = isSpanish ? 'un portfolio de matthew macalintal' : 'a portfolio by matthew macalintal';
+    tag.textContent = tags[document.documentElement.lang] || tags.en;
 
     var count = document.createElement('div');
     count.className = 'loader-count';

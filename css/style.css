@@ -419,6 +419,11 @@ html.js [data-reveal].revealed {
   color: var(--dim);
 }
 
+.menu-overlay .m-langs {
+  display: flex;
+  gap: 22px;
+}
+
 /* ---------- side rail (scroll spy) ---------- */
 
 .rail {
@@ -1527,8 +1532,21 @@ textarea.error {
 
 .tc-langs {
   display: flex;
-  gap: clamp(28px, 6vw, 80px);
+  flex-wrap: wrap;
+  gap: clamp(28px, 5vw, 64px);
   align-items: center;
+}
+
+@media (max-width: 860px) {
+  .tc-langs {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 22px;
+  }
+
+  .tc-langs .divider {
+    display: none;
+  }
 }
 
 .tc-langs .divider {
@@ -1631,6 +1649,14 @@ textarea.error {
 
   .top-links a:not(.lang) {
     display: none;
+  }
+
+  .top-links {
+    gap: 12px;
+  }
+
+  .top-links .lang {
+    padding: 6px 9px;
   }
 
   .menu-btn {

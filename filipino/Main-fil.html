@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="fil">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matthew Macalintal — Obsidian Portfolio</title>
+  <meta name="description" content="Matthew Macalintal — ASIR student sa Madrid. Systems, networks, web at AI. Isang cinematic na single-page portfolio.">
+  <meta name="theme-color" content="#080808">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23080808'/%3E%3Ctext x='50' y='72' font-size='60' font-family='Arial Narrow, Arial' font-weight='bold' text-anchor='middle' fill='%23efece6'%3EM%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@300;400;500&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+  <header class="topbar">
+    <a class="logo" href="#top">Macalintal <em>— portfolio</em></a>
+    <nav class="top-links">
+      <a href="https://github.com/Hitori-Kaizen" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/james-macalintal-099469302/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:macalintaljames26@gmail.com">Mail</a>
+      <a class="lang" href="../english/Main.html" hreflang="en">EN</a>
+      <a class="lang" href="../spanish/Main-es.html" hreflang="es">ES</a>
+      <button class="menu-btn" id="menu-btn" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <div class="menu-overlay" id="menu-overlay">
+    <a class="m-link" style="--i:0" href="#about"><i>01</i>Tungkol</a>
+    <a class="m-link" style="--i:1" href="#skills"><i>02</i>Kasanayan</a>
+    <a class="m-link" style="--i:2" href="#work"><i>03</i>Proyekto</a>
+    <a class="m-link" style="--i:3" href="#education"><i>04</i>Edukasyon</a>
+    <a class="m-link" style="--i:4" href="#contact"><i>05</i>Kontak</a>
+    <div class="m-foot">
+      <span>Madrid, Spain</span>
+      <span class="m-langs">
+        <a href="../english/Main.html">English →</a>
+        <a href="../spanish/Main-es.html">Español →</a>
+      </span>
+    </div>
+  </div>
+
+  <nav class="rail" aria-label="Mga seksyon">
+    <a href="#about">Tungkol</a>
+    <a href="#skills">Kasanayan</a>
+    <a href="#work">Proyekto</a>
+    <a href="#education">Edukasyon</a>
+    <a href="#contact">Kontak</a>
+  </nav>
+
+  <div class="readout" aria-hidden="true">
+    <span class="rec"></span>
+    <b id="ro-idx">01/06</b>
+    <span id="ro-label">Intro</span>
+  </div>
+
+  <main id="top">
+
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="intro" data-label="Intro">
+      <img class="hero-img" src="../images/me_bro.jpg" alt="Matthew Macalintal" data-parallax="0.06">
+      <div class="hero-img-fade" aria-hidden="true"></div>
+      <div class="wrap hero-inner">
+        <div class="hero-badge" data-reveal>
+          <span class="rec"></span> Bukas para sa internship — 2026
+        </div>
+        <p class="hero-over" data-reveal>isang portfolio ni</p>
+        <h1>
+          <span class="l" data-split>Matthew</span>
+          <span class="l" data-split>Macalintal</span>
+        </h1>
+        <div class="hero-roles" data-reveal data-reveal-delay="300">
+          <span class="dash"></span>
+          <span class="rotator" data-rotate='["Estudyante ng systems at networks","Web developer","Mahilig sa AI","Linux user"]'></span>
+        </div>
+      </div>
+      <div class="hero-foot">
+        <span class="hero-loc">40.4168° N — Madrid, ES</span>
+        <span class="scroll-cue">Mag-scroll<span class="line"></span></span>
+        <span id="local-time">—</span>
+      </div>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Systems</span><span class="fill">—</span><span>Networks</span><span class="fill">—</span>
+        <span>Web</span><span class="fill">—</span><span>AI</span><span class="fill">—</span>
+        <span>Systems</span><span class="fill">—</span><span>Networks</span><span class="fill">—</span>
+        <span>Web</span><span class="fill">—</span><span>AI</span><span class="fill">—</span>
+      </div>
+    </div>
+
+    <!-- ================= TUNGKOL ================= -->
+    <section class="sec" id="about" data-label="Tungkol">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="sec-idx">( 01 )</span>
+          <h2 class="sec-title" data-split>Tungkol</h2>
+          <p class="sec-note">estudyante sa araw,<br>builder sa gabi.</p>
+        </div>
+        <div class="about-grid">
+          <div>
+            <p class="pull-quote" data-reveal>
+              “Bawat proyekto ay pagkakataong matuto ng bago — <em>mula sa pag-configure ng router
+              hanggang sa pagbuo ng isang AI assistant.</em>”
+            </p>
+            <div class="about-copy">
+              <p data-reveal>
+                Isa akong programming student na kasalukuyang nag-aaral ng <strong>ASIR — Systems
+                Administration</strong> sa DIGITECH Madrid. Mahilig ako sa programming at sa paggawa
+                ng mga bagay para sa web, at palagi akong naghahanap ng susunod na skill na
+                magpapagaling pa sa akin dito.
+              </p>
+              <p data-reveal>
+                Pinagsasama ko ang <strong>teknikal na katumpakan</strong> at malikhaing
+                paglutas ng problema. Ginagamit ko rin ang <strong>mga AI tool para mas mabilis matuto</strong> —
+                mabilis kumilos, laging updated, at talagang inuunawa ang mga bagay sa halip na
+                kumopya lang ng sagot.
+              </p>
+              <p data-reveal>
+                Kapag wala sa keyboard: video games, pelikula, design, photography, at kung anumang
+                bagong teknolohiya ang susunod na lalabas.
+              </p>
+            </div>
+            <div style="margin-top: 44px;" data-reveal>
+              <a href="../files/CV.pdf" class="btn" download data-cursor="pdf ↓">I-download ang CV ↓</a>
+            </div>
+          </div>
+          <div class="about-side" data-reveal>
+            <div class="about-portrait">
+              <img src="../images/me_bro.jpg" alt="Larawan ni Matthew Macalintal">
+              <span class="cap"><span>Fig. 01 — Larawan</span><span>Madrid</span></span>
+            </div>
+            <div class="index-table">
+              <div class="index-row"><span class="k">Nakatira sa</span><span class="v">Madrid, Spain</span></div>
+              <div class="index-row"><span class="k">Ngayon</span><span class="v">ASIR @ DIGITECH</span></div>
+              <div class="index-row"><span class="k">Status</span><span class="v">Bukas sa internship</span></div>
+              <div class="index-row"><span class="k">Mga wika</span><span class="v">English · Spanish · Filipino</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="stats-strip" data-reveal>
+          <div class="stat"><b data-count="4" data-pad="2">00</b><span>taon na sa IT</span></div>
+          <div class="stat"><b data-count="3" data-pad="2">00</b><span>proyektong may buong source</span></div>
+          <div class="stat"><b data-count="4" data-pad="2">00</b><span>lab experiment na tumatakbo</span></div>
+          <div class="stat"><b data-count="24" data-pad="2">00</b><span>oras na response time</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= KASANAYAN ================= -->
+    <section class="sec" id="skills" data-label="Kasanayan">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="sec-idx">( 02 )</span>
+          <h2 class="sec-title" data-split>Kasanayan</h2>
+          <p class="sec-note">ang laman ng<br>toolbox ko.</p>
+        </div>
+
+        <div class="skill-block" data-reveal>
+          <div class="skill-block-label"><i>A</i> Web programming</div>
+          <div class="skill-list">
+            <div class="skill-item"><span class="no">A·01</span><span class="nm">HTML / CSS</span><span class="lv">Advanced</span></div>
+            <div class="skill-item"><span class="no">A·02</span><span class="nm">JavaScript</span><span class="lv">Working</span></div>
+            <div class="skill-item"><span class="no">A·03</span><span class="nm">Python</span><span class="lv">Working</span></div>
+          </div>
+        </div>
+
+        <div class="skill-block" data-reveal>
+          <div class="skill-block-label"><i>B</i> Networking</div>
+          <div class="skill-list">
+            <div class="skill-item"><span class="no">B·01</span><span class="nm">Router &amp; Switch Config</span><span class="lv">Advanced</span></div>
+            <div class="skill-item"><span class="no">B·02</span><span class="nm">Packet Tracer</span><span class="lv">Advanced</span></div>
+            <div class="skill-item"><span class="no">B·03</span><span class="nm">VLANs &amp; Routing</span><span class="lv">Working</span></div>
+          </div>
+        </div>
+
+        <div class="skill-block" data-reveal>
+          <div class="skill-block-label"><i>C</i> Systems</div>
+          <div class="skill-list">
+            <div class="skill-item"><span class="no">C·01</span><span class="nm">Linux</span><span class="lv">Advanced</span></div>
+            <div class="skill-item"><span class="no">C·02</span><span class="nm">Windows 10 / 11</span><span class="lv">Advanced</span></div>
+            <div class="skill-item"><span class="no">C·03</span><span class="nm">Windows Server 2019</span><span class="lv">Working</span></div>
+          </div>
+        </div>
+
+        <div class="skill-block" data-reveal>
+          <div class="skill-block-label"><i>D</i> Office at hardware</div>
+          <div class="skill-list">
+            <div class="skill-item"><span class="no">D·01</span><span class="nm">MS Office Suite</span><span class="lv">Advanced</span></div>
+            <div class="skill-item"><span class="no">D·02</span><span class="nm">Pag-assemble at Pag-repair ng PC</span><span class="lv">Advanced</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROYEKTO ================= -->
+    <section class="sec" id="work" data-label="Proyekto">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="sec-idx">( 03 )</span>
+          <h2 class="sec-title" data-split>Mga proyekto</h2>
+          <p class="sec-note">kasama ang buong source —<br>i-download at tuklasin.</p>
+        </div>
+
+        <div class="work-list">
+          <a class="work-row" href="../files/pro01-Nginx-Python-Flask-FastAPI-MySQL.zip" download data-preview="../images/portfolio-1.png" data-cursor="kunin ang zip ↓" data-reveal>
+            <div class="work-row-top">
+              <span class="no">/01</span>
+              <h3>Database &amp; Backend</h3>
+              <span class="arrow">→</span>
+            </div>
+            <p class="desc">Nginx reverse proxy sa harap ng mga Python Flask at FastAPI service, na may MySQL sa likod — mga REST endpoint, service config, at deployment layout.</p>
+            <div class="work-row-meta">
+              <span>Nginx</span><span>Flask / FastAPI</span><span>MySQL</span><span>I-download ↓</span>
+            </div>
+          </a>
+
+          <a class="work-row" href="../files/trabajo_final_mm.zip" download data-preview="../images/portfolio-2.png" data-cursor="kunin ang zip ↓" data-reveal>
+            <div class="work-row-top">
+              <span class="no">/02</span>
+              <h3>Network Design</h3>
+              <span class="arrow">→</span>
+            </div>
+            <p class="desc">Enterprise-style na network sa Cisco Packet Tracer — VLAN segmentation, inter-VLAN routing, at buong router at switch configuration mula sa simula.</p>
+            <div class="work-row-meta">
+              <span>Cisco</span><span>VLANs</span><span>Routing</span><span>I-download ↓</span>
+            </div>
+          </a>
+
+          <div class="work-row" data-preview="../images/portfolio-3.png" data-reveal>
+            <div class="work-row-top">
+              <span class="no">/03</span>
+              <h3>Azelonicur AI</h3>
+              <span class="arrow">→</span>
+            </div>
+            <p class="desc">Multi-agent AI assistant na nagpapatakbo ng mga local model gamit ang Ollama sa likod ng FastAPI backend — chat, tools at orchestration, buong self-hosted.</p>
+            <div class="work-row-meta">
+              <span>FastAPI</span><span>Ollama</span><span>Python</span><span>Source kapag hiniling</span>
+            </div>
+          </div>
+
+          <div class="work-row soon" data-reveal>
+            <div class="work-row-top">
+              <span class="no">/04</span>
+              <h3>Malapit na</h3>
+              <span class="arrow"></span>
+            </div>
+            <div class="work-row-meta"><span>Ginagawa pa</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= DARKROOM (interlude) ================= -->
+    <section class="darkroom" aria-label="Ang darkroom">
+      <div class="wrap dk-head">
+        <span class="sec-idx">( interlude )</span>
+        <p class="dk-note">ang darkroom — <em>hilahin ang mga print, ihagis-hagis mo.</em></p>
+        <span class="dk-hint">may kasamang physics</span>
+      </div>
+      <div class="deck-stage" id="deck-stage">
+        <figure class="print" data-rot="-7">
+          <img src="../images/me_bro.jpg" alt="Print ng larawan" draggable="false">
+          <figcaption><span>print 01</span><span>larawan — madrid</span></figcaption>
+        </figure>
+        <figure class="print" data-rot="5">
+          <img src="../images/portfolio-1.png" alt="Print ng backend project" draggable="false">
+          <figcaption><span>print 02</span><span>backend stack</span></figcaption>
+        </figure>
+        <figure class="print" data-rot="-3">
+          <img src="../images/portfolio-2.png" alt="Print ng network project" draggable="false">
+          <figcaption><span>print 03</span><span>network blueprint</span></figcaption>
+        </figure>
+        <figure class="print" data-rot="8">
+          <img src="../images/portfolio-3.png" alt="Print ng Azelonicur AI" draggable="false">
+          <figcaption><span>print 04</span><span>azelonicur ai</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ================= EDUKASYON ================= -->
+    <section class="sec" id="education" data-label="Edukasyon">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="sec-idx">( 04 )</span>
+          <h2 class="sec-title" data-split>Edukasyon</h2>
+          <p class="sec-note">tatlong taon na<br>sa IT.</p>
+        </div>
+
+        <div class="edu-list">
+          <div class="edu-row" data-reveal>
+            <div class="yr">2025—</div>
+            <div>
+              <h3>ASIR — Systems Administration</h3>
+              <div class="where">Digitech Madrid — kasalukuyang nag-aaral</div>
+              <p>Higher-level vocational training sa network systems administration. Nasa unang taon ngayon — servers, networks, databases at services.</p>
+            </div>
+          </div>
+          <div class="edu-row" data-reveal>
+            <div class="yr">23—25</div>
+            <div>
+              <h3>SMR — Microcomputer Systems &amp; Networks</h3>
+              <div class="where">Digitech Madrid — natapos</div>
+              <p>Natapos ang dalawang taon — hardware, operating systems, local networks at mga batayan ng web application.</p>
+            </div>
+          </div>
+          <div class="edu-row" data-reveal>
+            <div class="yr">19—23</div>
+            <div>
+              <h3>Secondary Education</h3>
+              <div class="where">Centro de Formación Padre Piquer — natapos</div>
+              <p>Sapilitang sekundaryang edukasyon (4º de la ESO), Madrid, Spain.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= KONTAK ================= -->
+    <section class="sec" id="contact" data-label="Kontak">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="sec-idx">( 05 )</span>
+          <h2 class="sec-title" data-split>Kontak</h2>
+          <p class="sec-note">bukas ang<br>inbox.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-left" data-reveal>
+            <div class="contact-big">Usap<br><em>tayo.</em></div>
+            <a class="contact-mail" href="mailto:macalintaljames26@gmail.com" data-cursor="sumulat sa akin ✉">macalintaljames26@gmail.com</a>
+            <div class="contact-facts index-table">
+              <div class="index-row"><span class="k">Lokasyon</span><span class="v">Madrid, Spain (CET)</span></div>
+              <div class="index-row"><span class="k">Sagot</span><span class="v">Karaniwan sa loob ng 24h</span></div>
+              <div class="index-row"><span class="k">Hinahanap</span><span class="v">Internship · Junior roles</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CREDITS ================= -->
+    <footer class="credits">
+      <div class="wrap">
+        <div class="eye-wrap" aria-hidden="true"><div class="eye"><div class="pupil"></div></div></div>
+        <p class="c-label">— wakas —</p>
+        <p class="c-name">Matthew Macalintal</p>
+        <p class="c-role">idinirek, dinisenyo at binuo on location sa Madrid</p>
+        <div class="c-socials">
+          <a href="https://github.com/Hitori-Kaizen" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com/in/james-macalintal-099469302/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://www.instagram.com/x._9qv.null.afterimage_77x" target="_blank" rel="noopener">Instagram</a>
+          <a href="mailto:macalintaljames26@gmail.com">Mail</a>
+        </div>
+        <div class="c-meta">
+          <span>© 2026 — lahat ng karapatan ay nakalaan</span>
+          <span>Obsidian cut · walang frameworks</span>
+          <a class="to-top-link" href="#top">Bumalik sa itaas ↑</a>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/fx.js"></script>
+</body>
+</html>

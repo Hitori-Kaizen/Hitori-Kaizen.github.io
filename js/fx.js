@@ -20,17 +20,21 @@
 
   var reduced = !forceFull && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var fine = window.matchMedia('(pointer: fine)').matches;
-  var isES = document.documentElement.lang === 'es';
+  var LANG = document.documentElement.lang;
   var isStart = null; /* resolved on DOM ready */
 
   /* ---------- i18n ---------- */
 
-  var T = isES ? {
+  var MAIN_PAGE = { en: 'Main.html', es: 'Main-es.html', fil: 'Main-fil.html' };
+  var SWITCH_TO = { en: 'Switch to English', es: 'Cambiar a español', fil: 'Lumipat sa Filipino' };
+
+  var STRINGS = {};
+  STRINGS.es = {
     cmdPlaceholder: 'Escribe un comando o busca…',
     gNav: 'Navegar', gActions: 'Acciones', gFun: 'Extras',
     about: 'Sobre mí', skills: 'Habilidades', work: 'Proyectos',
     education: 'Formación', contact: 'Contacto',
-    cv: 'Descargar CV', copyMail: 'Copiar email', switchLang: 'Switch to English',
+    cv: 'Descargar CV', copyMail: 'Copiar email',
     sound: 'Sonido sí / no', crt: 'Modo CRT',
     matrix: 'Lluvia matrix', top: 'Volver arriba',
     footKeys: '↑↓ navegar · ↵ ejecutar · esc cerrar',
@@ -42,12 +46,31 @@
     konami: 'código konami aceptado — crt activado',
     hint: 'Ctrl+K — paleta de comandos',
     reel: 'BOBINA'
-  } : {
+  };
+  STRINGS.fil = {
+    cmdPlaceholder: 'Mag-type ng command o maghanap…',
+    gNav: 'Pumunta sa', gActions: 'Mga aksyon', gFun: 'Extra',
+    about: 'Tungkol sa akin', skills: 'Mga kasanayan', work: 'Mga proyekto',
+    education: 'Edukasyon', contact: 'Kontak',
+    cv: 'I-download ang CV', copyMail: 'Kopyahin ang email',
+    sound: 'Tunog on / off', crt: 'CRT mode',
+    matrix: 'Matrix rain', top: 'Bumalik sa itaas',
+    footKeys: '↑↓ pumili · ↵ patakbuhin · esc isara',
+    noResults: 'walang nahanap — subukan ang "cv" o "matrix"',
+    mailCopied: 'nakopya ang email sa clipboard',
+    sndOn: 'naka-on ang tunog', sndOff: 'naka-off ang tunog',
+    crtOn: 'crt mode — naka-on ang analog signal', crtOff: 'naka-off ang crt mode',
+    mxOn: 'matrix rain — esc para lumabas', mxOff: 'balik sa realidad',
+    konami: 'tanggap ang konami code — naka-on ang crt',
+    hint: 'Ctrl+K — command palette',
+    reel: 'REEL'
+  };
+  STRINGS.en = {
     cmdPlaceholder: 'Type a command or search…',
     gNav: 'Navigate', gActions: 'Actions', gFun: 'Fun',
     about: 'About', skills: 'Skills', work: 'Work',
     education: 'Education', contact: 'Contact',
-    cv: 'Download CV', copyMail: 'Copy email', switchLang: 'Cambiar a español',
+    cv: 'Download CV', copyMail: 'Copy email',
     sound: 'Toggle sound', crt: 'CRT mode',
     matrix: 'Matrix rain', top: 'Back to top',
     footKeys: '↑↓ navigate · ↵ run · esc close',
@@ -60,6 +83,7 @@
     hint: 'Ctrl+K — command palette',
     reel: 'REEL'
   };
+  var T = STRINGS[LANG] || STRINGS.en;
 
   var MAIL = 'macalintaljames26@gmail.com';
 
@@ -83,7 +107,7 @@
   function mainHref() {
     if (document.getElementById('about')) return '';
     if (isStart) return 'english/Main.html';
-    return isES ? 'Main-es.html' : 'Main.html';
+    return MAIN_PAGE[LANG] || MAIN_PAGE.en;
   }
 
   /* ============================================================
@@ -224,9 +248,10 @@
         { g: T.gFun, label: T.crt, hint: 'tv', act: { fn: toggleCRT } },
         { g: T.gFun, label: T.matrix, hint: 'rain', act: { fn: toggleMatrix } }
       ];
-      var langLink = document.querySelector('.top-links .lang');
-      if (langLink) {
-        items.splice(9, 0, { g: T.gActions, label: T.switchLang, hint: isES ? 'en' : 'es', act: { goto: langLink.getAttribute('href') } });
+      var langLinks = document.querySelectorAll('.top-links .lang');
+      for (var i = 0; i < langLinks.length; i++) {
+        var code = langLinks[i].getAttribute('hreflang');
+        items.splice(9 + i, 0, { g: T.gActions, label: SWITCH_TO[code], hint: code, act: { goto: langLinks[i].getAttribute('href') } });
       }
       palette.items = items;
     },
