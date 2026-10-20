@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matthew Macalintal — Portfolio Obsidian</title>
+  <meta name="description" content="Matthew Macalintal — estudiante de ASIR en Madrid. Sistemas, redes, web e IA. Un portfolio cinematográfico de una sola página.">
+  <meta name="theme-color" content="#080808">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23080808'/%3E%3Ctext x='50' y='72' font-size='60' font-family='Arial Narrow, Arial' font-weight='bold' text-anchor='middle' fill='%23efece6'%3EM%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@300;400;500&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+  <header class="topbar">
+    <a class="logo" href="#top">Macalintal <em>— portfolio</em></a>
+    <nav class="top-links">
+      <a href="https://github.com/Hitori-Kaizen" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/james-macalintal-099469302/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:macalintaljames26@gmail.com">Mail</a>
+      <a class="lang" href="../english/Main.html">EN</a>
+      <button class="menu-btn" id="menu-btn" aria-label="Menú" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <div class="menu-overlay" id="menu-overlay">
+    <a class="m-link" style="--i:0" href="#about"><i>01</i>Sobre mí</a>
+    <a class="m-link" style="--i:1" href="#skills"><i>02</i>Habilidades</a>
+    <a class="m-link" style="--i:2" href="#work"><i>03</i>Proyectos</a>
+    <a class="m-link" style="--i:3" href="#education"><i>04</i>Formación</a>
+    <a class="m-link" style="--i:4" href="#contact"><i>05</i>Contacto</a>
+    <div class="m-foot">
+      <span>Madrid, España</span>
+      <a href="../english/Main.html">English →</a>
+    </div>
+  </div>
+
+  <nav class="rail" aria-label="Secciones">
+    <a href="#about">Sobre mí</a>
+    <a href="#skills">Habilidades</a>
+    <a href="#work">Proyectos</a>
+    <a href="#education">Formación</a>
+    <a href="#contact">Contacto</a>
+  </nav>
+
+  <div class="readout" aria-hidden="true">
+    <span class="rec"></span>
+    <b id="ro-idx">01/06</b>
+    <span id="ro-label">Intro</span>
+  </div>
+
+  <main id="top">
+
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="intro" data-label="Intro">
+      <img class="hero-img" src="../images/me_bro.jpg" alt="Matthew Macalintal" data-parallax="0.06">
+      <div class="hero-img-fade" aria-hidden="true"></div>
+      <div class="wrap hero-inner">
+        <div class="hero-badge" data-reveal>
+          <span class="rec"></span> Abierto a prácticas — 2026
+        </div>
+        <p class="hero-over" data-reveal>un portfolio de</p>
+        <h1>
+          <span class="l" data-split>Matthew</span>
+          <span class="l" data-split>Macalintal</span>
+        </h1>
+        <div class="hero-roles" data-reveal data-reveal-delay="300">
+          <span class="dash"></span>
+          <span class="rotator" data-rotate='["Estudiante de sistemas y redes","Desarrollador web","Entusiasta de la IA","Usuario de Linux"]'></span>
+        </div>
+      </div>
+      <div class="hero-foot">
+        <span class="hero-loc">40.4168° N — Madrid, ES</span>
+        <span class="scroll-cue">Scroll<span class="line"></span></span>
+        <span id="local-time">—</span>
+      </div>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Sistemas</span><span class="fill">—</span><span>Redes</span><span class="fill">—</span>
+        <span>Web</span><span class="fill">—</span><span>IA</span><span class="fill">—</span>
+        <span>Sistemas</span><span class="fill">—</span><span>Redes</span><span class="fill">—</span>
+        <span>Web</span><span class="fill">—</span><span>IA</span><span class="fill">—</span>
+      </div>
+    </div>
+
+    <!-- ================= SOBRE MÍ ================= -->
+    <section class="sec" id="about" data-label="Sobre mí">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="sec-idx">( 01 )</span>
+          <h2 class="sec-title" data-split>Sobre mí</h2>
+          <p class="sec-note">estudiante de día,<br>constructor de noche.</p>
+        </div>
+        <div class="about-grid">
+          <div>
+            <p class="pull-quote" data-reveal>
+              «Cada proyecto es una oportunidad para aprender algo nuevo — <em>desde configurar
+              un router hasta montar un asistente de IA.</em>»
+            </p>
+            <div class="about-copy">
+              <p data-reveal>
+                Soy estudiante de programación, actualmente cursando <strong>ASIR —
+                Administración de Sistemas Informáticos en Red</strong> en DIGITECH Madrid.
+                Me encanta programar y crear cosas para la web, y siempre estoy buscando
+                la próxima habilidad que me haga mejor en esto.
+              </p>
+              <p data-reveal>
+                Mi enfoque combina <strong>precisión técnica</strong> con resolución creativa
+                de problemas. También uso <strong>herramientas de IA como acelerador de
+                aprendizaje</strong> — avanzando rápido, al día con lo nuevo, y entendiendo
+                a fondo en lugar de copiar respuestas.
+              </p>
+              <p data-reveal>
+                Fuera del teclado: videojuegos, cine, diseño, fotografía y cualquier
+                tecnología nueva que salga.
+              </p>
+            </div>
+            <div style="margin-top: 44px;" data-reveal>
+              <a href="../files/CV.pdf" class="btn" download data-cursor="pdf ↓">Descargar CV ↓</a>
+            </div>
+          </div>
+          <div class="about-side" data-reveal>
+            <div class="about-portrait">
+              <img src="../images/me_bro.jpg" alt="Retrato de Matthew Macalintal">
+              <span class="cap"><span>Fig. 01 — Retrato</span><span>Madrid</span></span>
+            </div>
+            <div class="index-table">
+              <div class="index-row"><span class="k">Ubicación</span><span class="v">Madrid, España</span></div>
+              <div class="index-row"><span class="k">Actualmente</span><span class="v">ASIR @ DIGITECH</span></div>
+              <div class="index-row"><span class="k">Estado</span><span class="v">Abierto a prácticas</span></div>
+              <div class="index-row"><span class="k">Idiomas</span><span class="v">Inglés · Español</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="stats-strip" data-reveal>
+          <div class="stat"><b data-count="4" data-pad="2">00</b><span>años metido en IT</span></div>
+          <div class="stat"><b data-count="3" data-pad="2">00</b><span>proyectos con código completo</span></div>
+          <div class="stat"><b data-count="4" data-pad="2">00</b><span>experimentos en el lab</span></div>
+          <div class="stat"><b data-count="24" data-pad="2">00</b><span>horas de tiempo de respuesta</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= HABILIDADES ================= -->
+    <section class="sec" id="skills" data-label="Habilidades">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="sec-idx">( 02 )</span>
+          <h2 class="sec-title" data-split>Habilidades</h2>
+          <p class="sec-note">el índice de mi<br>caja de herramientas.</p>
+        </div>
+
+        <div class="skill-block" data-reveal>
+          <div class="skill-block-label"><i>A</i> Programación web</div>
+          <div class="skill-list">
+            <div class="skill-item"><span class="no">A·01</span><span class="nm">HTML / CSS</span><span class="lv">Avanzado</span></div>
+            <div class="skill-item"><span class="no">A·02</span><span class="nm">JavaScript</span><span class="lv">Competente</span></div>
+            <div class="skill-item"><span class="no">A·03</span><span class="nm">Python</span><span class="lv">Competente</span></div>
+          </div>
+        </div>
+
+        <div class="skill-block" data-reveal>
+          <div class="skill-block-label"><i>B</i> Redes</div>
+          <div class="skill-list">
+            <div class="skill-item"><span class="no">B·01</span><span class="nm">Config. Router y Switch</span><span class="lv">Avanzado</span></div>
+            <div class="skill-item"><span class="no">B·02</span><span class="nm">Packet Tracer</span><span class="lv">Avanzado</span></div>
+            <div class="skill-item"><span class="no">B·03</span><span class="nm">VLANs y Routing</span><span class="lv">Competente</span></div>
+          </div>
+        </div>
+
+        <div class="skill-block" data-reveal>
+          <div class="skill-block-label"><i>C</i> Sistemas</div>
+          <div class="skill-list">
+            <div class="skill-item"><span class="no">C·01</span><span class="nm">Linux</span><span class="lv">Avanzado</span></div>
+            <div class="skill-item"><span class="no">C·02</span><span class="nm">Windows 10 / 11</span><span class="lv">Avanzado</span></div>
+            <div class="skill-item"><span class="no">C·03</span><span class="nm">Windows Server 2019</span><span class="lv">Competente</span></div>
+          </div>
+        </div>
+
+        <div class="skill-block" data-reveal>
+          <div class="skill-block-label"><i>D</i> Ofimática y hardware</div>
+          <div class="skill-list">
+            <div class="skill-item"><span class="no">D·01</span><span class="nm">Suite MS Office</span><span class="lv">Avanzado</span></div>
+            <div class="skill-item"><span class="no">D·02</span><span class="nm">Montaje y reparación de PC</span><span class="lv">Avanzado</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROYECTOS ================= -->
+    <section class="sec" id="work" data-label="Proyectos">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="sec-idx">( 03 )</span>
+          <h2 class="sec-title" data-split>Proyectos</h2>
+          <p class="sec-note">código fuente incluido —<br>descarga y explora.</p>
+        </div>
+
+        <div class="work-list">
+          <a class="work-row" href="../files/pro01-Nginx-Python-Flask-FastAPI-MySQL.zip" download data-preview="../images/portfolio-1.png" data-cursor="llévate el zip ↓" data-reveal>
+            <div class="work-row-top">
+              <span class="no">/01</span>
+              <h3>Base de datos y Backend</h3>
+              <span class="arrow">→</span>
+            </div>
+            <p class="desc">Proxy inverso Nginx delante de servicios Python Flask y FastAPI, con MySQL — endpoints REST, configuración de servicios y despliegue.</p>
+            <div class="work-row-meta">
+              <span>Nginx</span><span>Flask / FastAPI</span><span>MySQL</span><span>Descargar ↓</span>
+            </div>
+          </a>
+
+          <a class="work-row" href="../files/trabajo_final_mm.zip" download data-preview="../images/portfolio-2.png" data-cursor="llévate el zip ↓" data-reveal>
+            <div class="work-row-top">
+              <span class="no">/02</span>
+              <h3>Diseño de Red</h3>
+              <span class="arrow">→</span>
+            </div>
+            <p class="desc">Red de estilo empresarial en Cisco Packet Tracer — segmentación con VLANs, enrutamiento inter-VLAN y configuración completa desde cero.</p>
+            <div class="work-row-meta">
+              <span>Cisco</span><span>VLANs</span><span>Routing</span><span>Descargar ↓</span>
+            </div>
+          </a>
+
+          <div class="work-row" data-preview="../images/portfolio-3.png" data-reveal>
+            <div class="work-row-top">
+              <span class="no">/03</span>
+              <h3>Azelonicur AI</h3>
+              <span class="arrow">→</span>
+            </div>
+            <p class="desc">Asistente de IA multiagente con modelos locales vía Ollama y backend FastAPI — chat, herramientas y orquestación, todo autoalojado.</p>
+            <div class="work-row-meta">
+              <span>FastAPI</span><span>Ollama</span><span>Python</span><span>Código a petición</span>
+            </div>
+          </div>
+
+          <div class="work-row soon" data-reveal>
+            <div class="work-row-top">
+              <span class="no">/04</span>
+              <h3>Próximamente</h3>
+              <span class="arrow"></span>
+            </div>
+            <div class="work-row-meta"><span>En producción</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CUARTO OSCURO (interludio) ================= -->
+    <section class="darkroom" aria-label="El cuarto oscuro">
+      <div class="wrap dk-head">
+        <span class="sec-idx">( interludio )</span>
+        <p class="dk-note">el cuarto oscuro — <em>arrastra las copias, lánzalas por ahí.</em></p>
+        <span class="dk-hint">física incluida</span>
+      </div>
+      <div class="deck-stage" id="deck-stage">
+        <figure class="print" data-rot="-7">
+          <img src="../images/me_bro.jpg" alt="Copia de retrato" draggable="false">
+          <figcaption><span>copia 01</span><span>retrato — madrid</span></figcaption>
+        </figure>
+        <figure class="print" data-rot="5">
+          <img src="../images/portfolio-1.png" alt="Copia del proyecto backend" draggable="false">
+          <figcaption><span>copia 02</span><span>stack backend</span></figcaption>
+        </figure>
+        <figure class="print" data-rot="-3">
+          <img src="../images/portfolio-2.png" alt="Copia del proyecto de red" draggable="false">
+          <figcaption><span>copia 03</span><span>plano de red</span></figcaption>
+        </figure>
+        <figure class="print" data-rot="8">
+          <img src="../images/portfolio-3.png" alt="Copia de Azelonicur AI" draggable="false">
+          <figcaption><span>copia 04</span><span>azelonicur ai</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ================= FORMACIÓN ================= -->
+    <section class="sec" id="education" data-label="Formación">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="sec-idx">( 04 )</span>
+          <h2 class="sec-title" data-split>Formación</h2>
+          <p class="sec-note">tres años metido<br>en IT.</p>
+        </div>
+
+        <div class="edu-list">
+          <div class="edu-row" data-reveal>
+            <div class="yr">2025—</div>
+            <div>
+              <h3>ASIR — Administración de Sistemas Informáticos en Red</h3>
+              <div class="where">Digitech Madrid — en curso</div>
+              <p>Grado superior de administración de sistemas en red. Actualmente en primer curso — servidores, redes, bases de datos y servicios.</p>
+            </div>
+          </div>
+          <div class="edu-row" data-reveal>
+            <div class="yr">23—25</div>
+            <div>
+              <h3>SMR — Sistemas Microinformáticos y Redes</h3>
+              <div class="where">Digitech Madrid — completado</div>
+              <p>Grado medio completado — hardware, sistemas operativos, redes locales y fundamentos de aplicaciones web.</p>
+            </div>
+          </div>
+          <div class="edu-row" data-reveal>
+            <div class="yr">19—23</div>
+            <div>
+              <h3>Educación Secundaria</h3>
+              <div class="where">Centro de Formación Padre Piquer — completado</div>
+              <p>Educación secundaria obligatoria (4º de la ESO), Madrid, España.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACTO ================= -->
+    <section class="sec" id="contact" data-label="Contacto">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="sec-idx">( 05 )</span>
+          <h2 class="sec-title" data-split>Contacto</h2>
+          <p class="sec-note">la bandeja de entrada<br>está abierta.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-left" data-reveal>
+            <div class="contact-big">Habla<em>mos.</em></div>
+            <a class="contact-mail" href="mailto:macalintaljames26@gmail.com" data-cursor="escríbeme ✉">macalintaljames26@gmail.com</a>
+            <div class="contact-facts index-table">
+              <div class="index-row"><span class="k">Ubicación</span><span class="v">Madrid, España (CET)</span></div>
+              <div class="index-row"><span class="k">Respuesta</span><span class="v">Normalmente en 24h</span></div>
+              <div class="index-row"><span class="k">Busco</span><span class="v">Prácticas · Puestos junior</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CRÉDITOS ================= -->
+    <footer class="credits">
+      <div class="wrap">
+        <div class="eye-wrap" aria-hidden="true"><div class="eye"><div class="pupil"></div></div></div>
+        <p class="c-label">— fin —</p>
+        <p class="c-name">Matthew Macalintal</p>
+        <p class="c-role">dirigido, diseñado y construido en Madrid</p>
+        <div class="c-socials">
+          <a href="https://github.com/Hitori-Kaizen" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com/in/james-macalintal-099469302/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://www.instagram.com/x._9qv.null.afterimage_77x" target="_blank" rel="noopener">Instagram</a>
+          <a href="mailto:macalintaljames26@gmail.com">Mail</a>
+        </div>
+        <div class="c-meta">
+          <span>© 2026 — todos los derechos reservados</span>
+          <span>Corte obsidian · sin frameworks</span>
+          <a class="to-top-link" href="#top">Volver arriba ↑</a>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/fx.js"></script>
+</body>
+</html>

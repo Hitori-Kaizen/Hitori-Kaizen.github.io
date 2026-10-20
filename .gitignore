@@ -1,0 +1,17 @@
+# Azelonicur AI source - deliberately NOT published.
+# The file stays on the USB; it is only excluded from this repository.
+files/azelonicur_source.zip
+
+# editor / OS noise
+.claude/
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# unused personal photos (were only used by the removed Lab image viewer).
+# They stay on the USB; just not published.
+images/siyu1.jpg
+images/siyu2.jpg
+images/siyu3.jpg
+images/siyu4.jpg
+images/siyu5.jpg

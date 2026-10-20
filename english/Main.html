@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matthew Macalintal — Obsidian Portfolio</title>
+  <meta name="description" content="Matthew Macalintal — ASIR student in Madrid. Systems, networks, web and AI. A cinematic single-page portfolio.">
+  <meta name="theme-color" content="#080808">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23080808'/%3E%3Ctext x='50' y='72' font-size='60' font-family='Arial Narrow, Arial' font-weight='bold' text-anchor='middle' fill='%23efece6'%3EM%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@300;400;500&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+  <header class="topbar">
+    <a class="logo" href="#top">Macalintal <em>— portfolio</em></a>
+    <nav class="top-links">
+      <a href="https://github.com/Hitori-Kaizen" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/james-macalintal-099469302/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:macalintaljames26@gmail.com">Mail</a>
+      <a class="lang" href="../spanish/Main-es.html">ES</a>
+      <button class="menu-btn" id="menu-btn" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <div class="menu-overlay" id="menu-overlay">
+    <a class="m-link" style="--i:0" href="#about"><i>01</i>About</a>
+    <a class="m-link" style="--i:1" href="#skills"><i>02</i>Skills</a>
+    <a class="m-link" style="--i:2" href="#work"><i>03</i>Work</a>
+    <a class="m-link" style="--i:3" href="#education"><i>04</i>Education</a>
+    <a class="m-link" style="--i:4" href="#contact"><i>05</i>Contact</a>
+    <div class="m-foot">
+      <span>Madrid, Spain</span>
+      <a href="../spanish/Main-es.html">Español →</a>
+    </div>
+  </div>
+
+  <nav class="rail" aria-label="Sections">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#work">Work</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="readout" aria-hidden="true">
+    <span class="rec"></span>
+    <b id="ro-idx">01/06</b>
+    <span id="ro-label">Intro</span>
+  </div>
+
+  <main id="top">
+
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="intro" data-label="Intro">
+      <img class="hero-img" src="../images/me_bro.jpg" alt="Matthew Macalintal" data-parallax="0.06">
+      <div class="hero-img-fade" aria-hidden="true"></div>
+      <div class="wrap hero-inner">
+        <div class="hero-badge" data-reveal>
+          <span class="rec"></span> Open for internships — 2026
+        </div>
+        <p class="hero-over" data-reveal>a portfolio by</p>
+        <h1>
+          <span class="l" data-split>Matthew</span>
+          <span class="l" data-split>Macalintal</span>
+        </h1>
+        <div class="hero-roles" data-reveal data-reveal-delay="300">
+          <span class="dash"></span>
+          <span class="rotator" data-rotate='["Systems &amp; networks student","Web developer","AI enthusiast","Linux user"]'></span>
+        </div>
+      </div>
+      <div class="hero-foot">
+        <span class="hero-loc">40.4168° N — Madrid, ES</span>
+        <span class="scroll-cue">Scroll<span class="line"></span></span>
+        <span id="local-time">—</span>
+      </div>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Systems</span><span class="fill">—</span><span>Networks</span><span class="fill">—</span>
+        <span>Web</span><span class="fill">—</span><span>AI</span><span class="fill">—</span>
+        <span>Systems</span><span class="fill">—</span><span>Networks</span><span class="fill">—</span>
+        <span>Web</span><span class="fill">—</span><span>AI</span><span class="fill">—</span>
+      </div>
+    </div>
+
+    <!-- ================= ABOUT ================= -->
+    <section class="sec" id="about" data-label="About">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="sec-idx">( 01 )</span>
+          <h2 class="sec-title" data-split>About</h2>
+          <p class="sec-note">student by day,<br>builder by night.</p>
+        </div>
+        <div class="about-grid">
+          <div>
+            <p class="pull-quote" data-reveal>
+              “Every project is a chance to learn something new — <em>from configuring a router
+              to wiring up an AI assistant.</em>”
+            </p>
+            <div class="about-copy">
+              <p data-reveal>
+                I'm a programming student currently studying <strong>ASIR — Systems
+                Administration</strong> at DIGITECH Madrid. I love programming and creating
+                things for the web, and I'm always hunting for the next skill that makes
+                me better at this.
+              </p>
+              <p data-reveal>
+                My approach combines <strong>technical precision</strong> with creative
+                problem-solving. I also use <strong>AI tools as a learning accelerator</strong> —
+                moving fast, staying current, and understanding things deeply instead of
+                copying answers.
+              </p>
+              <p data-reveal>
+                Off the keyboard: video games, movies, design, photography, and whatever
+                new technology drops next.
+              </p>
+            </div>
+            <div style="margin-top: 44px;" data-reveal>
+              <a href="../files/CV.pdf" class="btn" download data-cursor="pdf ↓">Download CV ↓</a>
+            </div>
+          </div>
+          <div class="about-side" data-reveal>
+            <div class="about-portrait">
+              <img src="../images/me_bro.jpg" alt="Portrait of Matthew Macalintal">
+              <span class="cap"><span>Fig. 01 — Portrait</span><span>Madrid</span></span>
+            </div>
+            <div class="index-table">
+              <div class="index-row"><span class="k">Based in</span><span class="v">Madrid, Spain</span></div>
+              <div class="index-row"><span class="k">Currently</span><span class="v">ASIR @ DIGITECH</span></div>
+              <div class="index-row"><span class="k">Status</span><span class="v">Open to internships</span></div>
+              <div class="index-row"><span class="k">Languages</span><span class="v">English · Spanish</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="stats-strip" data-reveal>
+          <div class="stat"><b data-count="4" data-pad="2">00</b><span>years deep into IT</span></div>
+          <div class="stat"><b data-count="3" data-pad="2">00</b><span>projects with full source</span></div>
+          <div class="stat"><b data-count="4" data-pad="2">00</b><span>lab experiments running</span></div>
+          <div class="stat"><b data-count="24" data-pad="2">00</b><span>hour response time</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SKILLS ================= -->
+    <section class="sec" id="skills" data-label="Skills">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="sec-idx">( 02 )</span>
+          <h2 class="sec-title" data-split>Skills</h2>
+          <p class="sec-note">the index of<br>my toolbox.</p>
+        </div>
+
+        <div class="skill-block" data-reveal>
+          <div class="skill-block-label"><i>A</i> Web programming</div>
+          <div class="skill-list">
+            <div class="skill-item"><span class="no">A·01</span><span class="nm">HTML / CSS</span><span class="lv">Advanced</span></div>
+            <div class="skill-item"><span class="no">A·02</span><span class="nm">JavaScript</span><span class="lv">Working</span></div>
+            <div class="skill-item"><span class="no">A·03</span><span class="nm">Python</span><span class="lv">Working</span></div>
+          </div>
+        </div>
+
+        <div class="skill-block" data-reveal>
+          <div class="skill-block-label"><i>B</i> Networking</div>
+          <div class="skill-list">
+            <div class="skill-item"><span class="no">B·01</span><span class="nm">Router &amp; Switch Config</span><span class="lv">Advanced</span></div>
+            <div class="skill-item"><span class="no">B·02</span><span class="nm">Packet Tracer</span><span class="lv">Advanced</span></div>
+            <div class="skill-item"><span class="no">B·03</span><span class="nm">VLANs &amp; Routing</span><span class="lv">Working</span></div>
+          </div>
+        </div>
+
+        <div class="skill-block" data-reveal>
+          <div class="skill-block-label"><i>C</i> Systems</div>
+          <div class="skill-list">
+            <div class="skill-item"><span class="no">C·01</span><span class="nm">Linux</span><span class="lv">Advanced</span></div>
+            <div class="skill-item"><span class="no">C·02</span><span class="nm">Windows 10 / 11</span><span class="lv">Advanced</span></div>
+            <div class="skill-item"><span class="no">C·03</span><span class="nm">Windows Server 2019</span><span class="lv">Working</span></div>
+          </div>
+        </div>
+
+        <div class="skill-block" data-reveal>
+          <div class="skill-block-label"><i>D</i> Office &amp; hardware</div>
+          <div class="skill-list">
+            <div class="skill-item"><span class="no">D·01</span><span class="nm">MS Office Suite</span><span class="lv">Advanced</span></div>
+            <div class="skill-item"><span class="no">D·02</span><span class="nm">PC Assembly &amp; Repair</span><span class="lv">Advanced</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= WORK ================= -->
+    <section class="sec" id="work" data-label="Work">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="sec-idx">( 03 )</span>
+          <h2 class="sec-title" data-split>Selected work</h2>
+          <p class="sec-note">full source included —<br>download &amp; explore.</p>
+        </div>
+
+        <div class="work-list">
+          <a class="work-row" href="../files/pro01-Nginx-Python-Flask-FastAPI-MySQL.zip" download data-preview="../images/portfolio-1.png" data-cursor="grab the zip ↓" data-reveal>
+            <div class="work-row-top">
+              <span class="no">/01</span>
+              <h3>Database &amp; Backend</h3>
+              <span class="arrow">→</span>
+            </div>
+            <p class="desc">Nginx reverse proxy in front of Python Flask and FastAPI services, backed by MySQL — REST endpoints, service config, deployment layout.</p>
+            <div class="work-row-meta">
+              <span>Nginx</span><span>Flask / FastAPI</span><span>MySQL</span><span>Download ↓</span>
+            </div>
+          </a>
+
+          <a class="work-row" href="../files/trabajo_final_mm.zip" download data-preview="../images/portfolio-2.png" data-cursor="grab the zip ↓" data-reveal>
+            <div class="work-row-top">
+              <span class="no">/02</span>
+              <h3>Network Design</h3>
+              <span class="arrow">→</span>
+            </div>
+            <p class="desc">Enterprise-style network in Cisco Packet Tracer — VLAN segmentation, inter-VLAN routing, full router and switch configuration from zero.</p>
+            <div class="work-row-meta">
+              <span>Cisco</span><span>VLANs</span><span>Routing</span><span>Download ↓</span>
+            </div>
+          </a>
+
+          <div class="work-row" data-preview="../images/portfolio-3.png" data-reveal>
+            <div class="work-row-top">
+              <span class="no">/03</span>
+              <h3>Azelonicur AI</h3>
+              <span class="arrow">→</span>
+            </div>
+            <p class="desc">Multi-agent AI assistant running local models through Ollama behind a FastAPI backend — chat, tools and orchestration, fully self-hosted.</p>
+            <div class="work-row-meta">
+              <span>FastAPI</span><span>Ollama</span><span>Python</span><span>Source on request</span>
+            </div>
+          </div>
+
+          <div class="work-row soon" data-reveal>
+            <div class="work-row-top">
+              <span class="no">/04</span>
+              <h3>Coming soon</h3>
+              <span class="arrow"></span>
+            </div>
+            <div class="work-row-meta"><span>In production</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= DARKROOM (interlude) ================= -->
+    <section class="darkroom" aria-label="The darkroom">
+      <div class="wrap dk-head">
+        <span class="sec-idx">( interlude )</span>
+        <p class="dk-note">the darkroom — <em>drag the prints, throw them around.</em></p>
+        <span class="dk-hint">physics included</span>
+      </div>
+      <div class="deck-stage" id="deck-stage">
+        <figure class="print" data-rot="-7">
+          <img src="../images/me_bro.jpg" alt="Portrait print" draggable="false">
+          <figcaption><span>print 01</span><span>portrait — madrid</span></figcaption>
+        </figure>
+        <figure class="print" data-rot="5">
+          <img src="../images/portfolio-1.png" alt="Backend project print" draggable="false">
+          <figcaption><span>print 02</span><span>backend stack</span></figcaption>
+        </figure>
+        <figure class="print" data-rot="-3">
+          <img src="../images/portfolio-2.png" alt="Network project print" draggable="false">
+          <figcaption><span>print 03</span><span>network blueprint</span></figcaption>
+        </figure>
+        <figure class="print" data-rot="8">
+          <img src="../images/portfolio-3.png" alt="Azelonicur AI print" draggable="false">
+          <figcaption><span>print 04</span><span>azelonicur ai</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ================= EDUCATION ================= -->
+    <section class="sec" id="education" data-label="Education">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="sec-idx">( 04 )</span>
+          <h2 class="sec-title" data-split>Education</h2>
+          <p class="sec-note">three years deep<br>into IT.</p>
+        </div>
+
+        <div class="edu-list">
+          <div class="edu-row" data-reveal>
+            <div class="yr">2025—</div>
+            <div>
+              <h3>ASIR — Systems Administration</h3>
+              <div class="where">Digitech Madrid — in progress</div>
+              <p>Higher-level vocational training in network systems administration. Currently in first year — servers, networks, databases and services.</p>
+            </div>
+          </div>
+          <div class="edu-row" data-reveal>
+            <div class="yr">23—25</div>
+            <div>
+              <h3>SMR — Microcomputer Systems &amp; Networks</h3>
+              <div class="where">Digitech Madrid — completed</div>
+              <p>Both years completed — hardware, operating systems, local networks and web application fundamentals.</p>
+            </div>
+          </div>
+          <div class="edu-row" data-reveal>
+            <div class="yr">19—23</div>
+            <div>
+              <h3>Secondary Education</h3>
+              <div class="where">Centro de Formación Padre Piquer — completed</div>
+              <p>Compulsory secondary education (4º de la ESO), Madrid, Spain.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section class="sec" id="contact" data-label="Contact">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="sec-idx">( 05 )</span>
+          <h2 class="sec-title" data-split>Contact</h2>
+          <p class="sec-note">the inbox<br>is open.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-left" data-reveal>
+            <div class="contact-big">Let's<br><em>talk.</em></div>
+            <a class="contact-mail" href="mailto:macalintaljames26@gmail.com" data-cursor="write me ✉">macalintaljames26@gmail.com</a>
+            <div class="contact-facts index-table">
+              <div class="index-row"><span class="k">Location</span><span class="v">Madrid, Spain (CET)</span></div>
+              <div class="index-row"><span class="k">Response</span><span class="v">Usually within 24h</span></div>
+              <div class="index-row"><span class="k">Looking for</span><span class="v">Internships · Junior roles</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CREDITS ================= -->
+    <footer class="credits">
+      <div class="wrap">
+        <div class="eye-wrap" aria-hidden="true"><div class="eye"><div class="pupil"></div></div></div>
+        <p class="c-label">— fin —</p>
+        <p class="c-name">Matthew Macalintal</p>
+        <p class="c-role">directed, designed &amp; built on location in Madrid</p>
+        <div class="c-socials">
+          <a href="https://github.com/Hitori-Kaizen" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com/in/james-macalintal-099469302/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://www.instagram.com/x._9qv.null.afterimage_77x" target="_blank" rel="noopener">Instagram</a>
+          <a href="mailto:macalintaljames26@gmail.com">Mail</a>
+        </div>
+        <div class="c-meta">
+          <span>© 2026 — all rights reserved</span>
+          <span>Obsidian cut · no frameworks</span>
+          <a class="to-top-link" href="#top">Back to top ↑</a>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/fx.js"></script>
+</body>
+</html>
