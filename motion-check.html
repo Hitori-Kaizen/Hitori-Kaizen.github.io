@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Motion check</title>
+<style>
+  body { background:#080808; color:#efece6; font:16px/1.7 ui-monospace,Menlo,Consolas,monospace; margin:0; padding:32px; }
+  h1 { font-size:20px; letter-spacing:.12em; margin:0 0 24px; }
+  .row { display:flex; gap:16px; padding:10px 0; border-bottom:1px solid #2a2a2a; }
+  .k { width:340px; color:#9a9a9a; }
+  .v { font-weight:bold; }
+  .good { color:#50fa7b; }
+  .bad  { color:#ff5555; }
+  .note { margin-top:28px; color:#9a9a9a; max-width:760px; }
+  a { color:#50fa7b; }
+  code { background:#1a1a1a; padding:2px 6px; border-radius:3px; }
+  #bar { height:6px; background:#50fa7b; width:0; margin-top:26px; }
+</style>
+</head>
+<body>
+<h1>MOTION CHECK</h1>
+<div id="out"></div>
+<div id="bar"></div>
+<div class="note">
+  If <span class="good">prefers-reduced-motion</span> reads <b>no-preference</b>, the machine is
+  fixed and the portfolio animates normally &mdash; you can close this page.<br><br>
+  If it reads <b>reduce</b>, Windows still has animations off. Open
+  <b>Settings &rarr; Accessibility &rarr; Visual effects &rarr; Animation effects</b> and turn it on.<br><br>
+  Links: <a href="index.html">Start</a> &middot;
+  <a href="index.html?motion=full">Start (forced full motion)</a> &middot;
+  <a href="english/Main.html">Main</a> &middot;
+  <a href="english/Main.html?motion=full">Main (forced full motion)</a>
+</div>
+
+<script>
+(function () {
+  var out = document.getElementById('out');
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var forced = /[?&]motion=full\b/.test(location.search);
+  var rows = [
+    ['prefers-reduced-motion', reduce ? 'reduce' : 'no-preference', !reduce],
+    ['motion=full override active', forced ? 'YES' : 'no', forced],
+    ['effective motion', (reduce && !forced) ? 'OFF' : 'ON', !(reduce && !forced)],
+    ['pointer: fine (mouse/trackpad)', window.matchMedia('(pointer: fine)').matches ? 'yes' : 'no', null],
+    ['devicePixelRatio', String(window.devicePixelRatio), null],
+    ['logical CPU threads', String(navigator.hardwareConcurrency || '?'), null],
+    ['screen', window.screen.width + 'x' + window.screen.height, null],
+    ['script src', location.protocol === 'file:' ? 'file:// (local)' : location.protocol, null]
+  ];
+
+  var html = '';
+  rows.forEach(function (r) {
+    var cls = r[2] === null ? '' : (r[2] ? 'good' : 'bad');
+    html += '<div class="row"><span class="k">' + r[0] +
+            '</span><span class="v ' + cls + '">' + r[1] + '</span></div>';
+  });
+  out.innerHTML = html;
+
+  /* did the site's own scripts actually load? */
+  var fx = !!document.createElement('script');
+  try {
+    fx = fx && typeof window.matchMedia === 'function';
+  } catch (e) { /* ignore */ }
+  var probe = document.createElement('div');
+  document.body.appendChild(probe);
+  setTimeout(function () {
+    var loaded = ['main.js', 'fx.js'].filter(function (f) {
+      return Array.prototype.some.call(document.scripts, function (s) {
+        return s.src.indexOf(f) !== -1;
+      });
+    });
+    var d = document.createElement('div');
+    d.className = 'row';
+    d.innerHTML = '<span class="k">this page has no site scripts (expected)</span>' +
+                  '<span class="v">checked ' + loaded.length + '</span>';
+    out.appendChild(d);
+
+    /* visible proof: animate a bar either way */
+    var bar = document.getElementById('bar');
+    var on = !(reduce && !forced);
+    if (on) {
+      bar.style.transition = 'width 1.2s ease-out';
+      requestAnimationFrame(function () { bar.style.width = '100%'; });
+    } else {
+      bar.style.width = '100%';
+    }
+  }, 60);
+})();
+</script>
+</body>
+</html>
